@@ -28,19 +28,19 @@ function makeHtmlBoard() {
   // TODO: get "htmlBoard" variable from the item in HTML w/ID of "board"
   const htmlBoard = document.getElementById("board");
 
-  // TODO: add comment for this code
+  // TODO: create a row that will represent each column and will allow a player to click on it
   let top = document.createElement("tr");
   top.setAttribute("id", "column-top");
   top.addEventListener("click", handleClick);
 
-  for (var x = 0; x < WIDTH; x++) {
+  for (let x = 0; x < WIDTH; x++) {
     let headCell = document.createElement("td");
     headCell.setAttribute("id", x);
     top.append(headCell);
   }
  htmlBoard.append(top);
 
-  // TODO: add comment for this code
+  // TODO: create the remainder of the board using the HEIGHT & WEIGHT variables
   for (let y = 0; y < HEIGHT; y++) {
     const row = document.createElement("tr");
     for (let x = 0; x < WIDTH; x++) {
